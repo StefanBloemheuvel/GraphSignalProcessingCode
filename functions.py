@@ -53,3 +53,12 @@ def compute_gft(shift_matrix, graph_signal):
     return np.dot(eigenvectors.T.conj(), graph_signal)
 
 
+def GTV(G_Signal,A):
+    newsignal = np.array(G_Signal).reshape(1,-1)
+    Diff_Vector=newsignal-(np.dot(A,signal))   
+    G_TotalVariation=LA.norm(Diff_Vector,ord=1)
+    
+    return (G_TotalVariation)
+
+
+
