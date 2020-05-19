@@ -24,3 +24,5 @@ def italy():
 	
 	G.remove_node('Sicilia')
 	return G
+
+	
